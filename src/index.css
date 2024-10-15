@@ -1,13 +1,173 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Base form styling */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+  border-top: 8px solid #007bff; /* Top border with primary color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Input fields */
+input, select, textarea, button {
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Select dropdown */
+select {
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 16px;
+}
+
+select:hover {
+  background-color: #e7e7e7;
+}
+
+/* Textarea styling */
+textarea {
+  resize: vertical;
+  height: 120px;
+  background-color: #fff;
+}
+
+/* Button styling */
+button {
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Label styling */
+label {
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Headings inside form */
+form h1 {
+  text-align: center;
+  color: #007bff;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+form p {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Section headers */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section h3 {
+  font-size: 20px;
+  color: #17a2b8;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #17a2b8;
+  padding-bottom: 5px;
+}
+
+/* Fieldset and Legend */
+fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #f5f8fa;
+}
+
+legend {
+  font-size: 18px;
+  color: #007bff;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+/* Button styling for different states */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="reset"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+button[type="reset"]:hover {
+  background-color: #c82333;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  input, select, textarea, button {
+    font-size: 14px;
+  }
+
+  form h1 {
+    font-size: 24px;
+  }
+}
+
+/* Miscellaneous Enhancements */
+input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+input, select, textarea {
+  border: 2px solid #ccc;
+  transition: all 0.2s ease-in-out;
+}
+
+input:hover, select:hover, textarea:hover {
+  border-color: #007bff;
 }
