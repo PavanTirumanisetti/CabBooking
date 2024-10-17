@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './ImageSlider.css'; // Custom CSS for styling the slider
 
 const ImageSlider = () => {
@@ -17,26 +17,34 @@ const ImageSlider = () => {
     '/images/image9.jpg',
   ];
 
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-    }, 3000); // Change slide every 3 seconds
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  };
 
-    return () => clearInterval(slideInterval);
-  }, [images.length]);
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  };
 
   return (
-    <div className="image-slider">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`slide ${index === currentSlide ? 'active' : ''}`}
-        >
-          {index === currentSlide && (
-            <img src={image} alt={`Slide ${index}`} className="slider-image" />
-          )}
-        </div>
-      ))}
+    <div className="image-slider-container">
+      <div className="image-slider">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`slide ${index === currentSlide ? 'active' : ''}`}
+          >
+            {index === currentSlide && (
+              <img src={image} alt={`Slide ${index}`} className="slider-image" />
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation buttons below the slider */}
+      <div className="slider-buttons">
+        <button className="prev" onClick={prevSlide}>&#10094;</button>
+        <button className="next" onClick={nextSlide}>&#10095;</button>
+      </div>
     </div>
   );
 };
