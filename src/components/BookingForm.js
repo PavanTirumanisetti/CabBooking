@@ -95,6 +95,9 @@ const BookingForm = () => {
     <div>
       <h1>Victor Luxuries</h1>
 
+      
+      <ImageSlider />
+
       {/* Pickup location */}
       <form onSubmit={handleSubmit}>
         <div>
@@ -214,7 +217,6 @@ const BookingForm = () => {
         {/* Submit button */}
         <button type="submit">Book Now</button>
       </form>
-      <ImageSlider />
 
       {/* Display booking summary after submission */}
       {submitted && (
