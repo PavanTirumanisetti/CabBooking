@@ -93,7 +93,7 @@ const BookingForm = () => {
 
   return (
     <div>
-      <h1>Victor Luxuries</h1>
+      <h1>Victor Luxury Limousine Private Limited</h1>
 
       
       <ImageSlider />
