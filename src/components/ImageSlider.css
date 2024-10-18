@@ -1,40 +1,46 @@
-.image-slider-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the buttons under the images */
+/* Slider container takes up the full viewport */
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .image-slider {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  display: flex;
-}
-
-.slider-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  display: flex;
+  position: relative;
 }
 
+/* Each image container takes up full viewport and is hidden by default */
 .slide {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
+/* Show only the active slide */
 .slide.active {
   opacity: 1;
 }
 
-/* Button container below the slider */
+/* Full-screen image styling */
+.full-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image covers full screen, may crop */
+}
+
+/* Button container for navigation */
 .slider-buttons {
-  margin-top: 10px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -45,13 +51,10 @@ button.prev, button.next {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 18px;
 }
 
 button:hover {
