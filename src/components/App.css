@@ -3,10 +3,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-image: url(https://wallpaperset.com/w/full/d/3/8/181081.jpg); /* Path to the background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
+
 
 /* General container for the form */
 form {
