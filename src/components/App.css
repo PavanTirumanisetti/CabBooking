@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url(https://wallpaperset.com/w/full/d/3/8/181081.jpg); /* Path to the background image */
+  background-image: url(https://images.freekaamaal.com/post_images/1606129883.png); /* Path to the background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -16,7 +16,7 @@ form {
   margin: 50px auto;
   padding: 30px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent to ensure readability */
+  background-color: rgb(255, 255, 255); /* Semi-transparent to ensure readability */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,12 +54,34 @@ button[type="submit"] {
 }
 
 /* Styling for the heading */
-h1 {
+.marquee {
   text-align: center;
   font-size: 35px;
-  color: #000000;
+  color: #000000; /* Text color */
   margin-bottom: 40px;
   font-weight: bold; /* Makes the heading bold */
   text-transform: uppercase; /* Adds uppercase style to the heading */
   letter-spacing: 2px; /* Adds spacing between letters */
+  
+  display: inline-block; /* Allows border to wrap around the text */
+  border: 2px solid #060000; /* Adds a 2px solid border with red color */
+  padding: 10px; /* Adds padding inside the border */
+  border-radius: 5px; /* Optional: Rounds the corners of the border */
+  background-color: rgba(244, 242, 242, 0.729); /* Adds a light red background color */
+
+  overflow: hidden; /* Prevents content from overflowing */
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  animation: scroll 25s linear infinite; /* Animation properties */
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End at the left */
+  }
+}
+
+
+

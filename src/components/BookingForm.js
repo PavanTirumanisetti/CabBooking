@@ -93,7 +93,14 @@ const BookingForm = () => {
 
   return (
     <div>
-      <h1>Victor Luxury Limousine Private Limited</h1>
+     <h1 className="marquee">
+  {Array.from("Victor luxury limousine private limited").map((letter, index) => (
+    <span key={index} className="letter">
+      {letter}
+    </span>
+  ))}
+</h1>
+
 
       
       <ImageSlider />
